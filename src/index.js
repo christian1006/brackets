@@ -1,14 +1,14 @@
-module.exports = function check(str, bracketsConfig) {
-   let i, l=str.length,  char,  last, stack=[];
+module.exports = function check(string, bracketsConfig) {
+   let i, l=string.length,  character,  last, stack=[];
 
   for(i=0; i<l; i++){
-      char=str[i];
-      if(char=="{" || char=="("){
-          stack.push(char);
-          last=char;
-      }else if(char == '}' || char == ")"){
+      character=string[i];
+      if(character=="{" || character=="("){
+          stack.push(character);
+          last=character;
+      }else if(character == '}' || character == ")"){
           if(last){
-              if((char == '}' && last == "{") || (char == ')' && last == '('))
+              if((character == '}' && last == "{") || (character == ')' && last == '('))
               {
                   stack.pop();
                   last = stack.length > 0 ? stack[stack.length - 1] : undefined;
