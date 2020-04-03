@@ -1,4 +1,4 @@
-module.exports = function check(string, bracketsConfig) {
+module.exports = function check(string, bracketsConfiguration) {
    let i, l=string.length,  character,  last, stack=[];
 
   for(i=0; i<l; i++){
